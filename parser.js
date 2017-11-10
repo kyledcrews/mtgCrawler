@@ -18,17 +18,26 @@ fs.readFile('./data/xln/M1.html', (err, data) => {
         var b = a.split('.')
         var re = /(-)?\d+/g
 
-        var filename = './price_icons.png'
-        
-        var request = {
-            source: {
-                filename: filename
-            }
-        }
+        var url = 'http://sales.starcitygames.com/price_icons.' + b[4].slice(0, -3)
+
+        // var request = {
+        //     source: {
+        //         filename: url
+        //     }
+        // }
+
+        vision.textDetection(request)
+        .then((results) => {
+            const labels = results[0].fullTextAnnotation.text;
+            console.log(labels)
+        })
+        .catch((err) => {
+            console.error('ERROR:', err);
+        });
         
         for(var i = 6; i < b.length; i++){
-            console.log(b[i], b[i].indexOf(' '))
-            console.log(b[i].substr(b[i].indexOf(' '), b[i].length).match(re))
+            // console.log(b[i], b[i].indexOf(' '))
+            // console.log(b[i].substr(b[i].indexOf(' '), b[i].length).match(re))
         }
         
     })
