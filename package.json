@@ -1,0 +1,24 @@
+{
+  "name": "mtgCrawler",
+  "version": "1.0.0",
+  "description": "MTG Card Price Crawler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waiting7777/mtgCrawler.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waiting7777/mtgCrawler/issues"
+  },
+  "homepage": "https://github.com/waiting7777/mtgCrawler#readme",
+  "dependencies": {
+    "request": "^2.83.0",
+    "x-ray": "^2.3.2"
+  }
+}
